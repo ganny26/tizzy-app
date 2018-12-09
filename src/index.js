@@ -6,7 +6,7 @@ import Stories from './Components/Stories';
 function App() {
   return (
     <div>
-      <Home name="Your are rendering gziped files"/>
+      <Home name="Hacker News List"/>
       <Stories/>
     </div>)
 }
