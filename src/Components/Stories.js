@@ -1,10 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-
-const TOP_STORIES =
-  'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty';
-const ITEM_STORIES = item =>
-  `https://hacker-news.firebaseio.com/v0/item/${item}.json?print=pretty`;
+import {ITEM_STORIES,TOP_STORIES} from '../Constant';
 
 class Stories extends React.Component {
   state = {
