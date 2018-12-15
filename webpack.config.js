@@ -14,6 +14,7 @@ module.exports = {
     filename: '[name].[hash].bundle.js',
     pathinfo: false
   },
+  devtool:'source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port: 9000,
