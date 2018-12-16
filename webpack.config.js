@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -14,7 +14,7 @@ module.exports = {
     filename: '[name].[hash].bundle.js',
     pathinfo: false
   },
-  devtool:'source-map',
+  devtool: 'source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port: 9000,
@@ -35,7 +35,11 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-proposal-class-properties','react-hot-loader/babel']
+            plugins: [
+              '@babel/plugin-proposal-class-properties',
+              'react-hot-loader/babel',
+              '@babel/plugin-syntax-dynamic-import'
+            ]
           }
         }
       },
@@ -69,4 +73,4 @@ module.exports = {
       verbose: true
     })
   ]
-};
+}
