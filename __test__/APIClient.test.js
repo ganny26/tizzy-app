@@ -3,7 +3,7 @@ import { TOP_STORIES } from '../src/Constant'
 
 describe('run apiclient', () => {
   beforeEach(() => {
-    console.log('beforeEach called')
+   // console.log('beforeEach called')
   })
 
   it('return null when no url is present', async () => {
