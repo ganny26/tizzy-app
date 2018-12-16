@@ -8,7 +8,7 @@ class Stories extends React.Component {
     rd: null
   }
 
-  async componentWillMount() {
+  async componentDidMount() {
     let response = await fetch(TOP_STORIES)
     let result = await response.json()
     this.setState(

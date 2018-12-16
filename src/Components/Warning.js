@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 const Warning = () => {
   return <h3 className="alert-exceed">Alert count exceeded the limit !</h3>
 }
