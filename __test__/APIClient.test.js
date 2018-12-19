@@ -3,7 +3,14 @@ import { TOP_STORIES } from '../src/Constant'
 
 describe('run apiclient', () => {
   beforeEach(() => {
-   // console.log('beforeEach called')
+    global.fetch = jest.fn().mockImplementation(() =>
+      new Promise((resolve, reject) =>
+        resolve({
+          ok: true,
+          json: () => { id: '123' }
+        })
+      )
+    )
   })
 
   it('return null when no url is present', async () => {
