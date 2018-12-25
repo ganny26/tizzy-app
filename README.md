@@ -1,4 +1,4 @@
-## Serve webpack4 gzip file over nginx
+## Serve webpack 4 gzip file over nginx
 
 ### nginx conf.d
 
