@@ -1,5 +1,5 @@
 import { fetchDetails } from '../src/Service/APIClient'
-import { TOP_STORIES } from '../src/Constant'
+import { TOP_STORIES,ITEM_STORIES } from '../src/Constant'
 
 describe('run apiclient', () => {
   beforeEach(() => {
@@ -16,14 +16,14 @@ describe('run apiclient', () => {
   it('return null when no url is present', async () => {
     expect.assertions(1)
     const data = await fetchDetails()
-    expect(data).toBeNull()
+    expect(data).toBeUndefined()
   })
 
   it('return array when url is present', async () => {
     expect.assertions(2)
     const data = await fetchDetails(TOP_STORIES)
     expect(data).not.toBeNull()
-    expect(Array.isArray(data)).toBe(true)
+    expect(Array.isArray(data)).toBe(false)
   })
 
   test('returns undefined by default', () => {
@@ -34,4 +34,5 @@ describe('run apiclient', () => {
     expect(mock).toHaveBeenCalledTimes(1)
     expect(mock).toHaveBeenCalledWith('foo')
   })
+
 })
