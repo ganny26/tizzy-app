@@ -26,6 +26,17 @@ module.exports = {
       errors: true
     }
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'initial'
+        }
+      }
+    }
+  },
   module: {
     rules: [
       {
