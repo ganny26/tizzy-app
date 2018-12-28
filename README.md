@@ -1,5 +1,5 @@
-## Serve webpack 4 gzip file over nginx
-
+## Serve webpack 4 gzip file over nginx [![Build Status](https://travis-ci.org/ganny26/tizzy-app.svg?branch=master)](https://travis-ci.org/ganny26/tizzy-app)
+ 
 ### nginx conf.d
 
 ```
