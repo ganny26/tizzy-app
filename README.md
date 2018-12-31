@@ -3,7 +3,6 @@
 ### nginx conf.d
 
 ```
-
 gzip  on;
 server {
   listen       80;
@@ -14,5 +13,4 @@ server {
     gunzip on;
     expires max;
   }
-
 ```
