@@ -1,7 +1,7 @@
 import { fetchDetails } from '../src/Service/APIClient'
 import { TOP_STORIES,ITEM_STORIES } from '../src/Constant'
 
-describe('run apiclient', () => {
+describe('run apiclient test', () => {
   beforeEach(() => {
     global.fetch = jest.fn().mockImplementation(() =>
       new Promise((resolve, reject) =>
